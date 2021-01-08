@@ -1,3 +1,4 @@
+using HumbleBob.Bll.Extensions;
 using HumbleBob.Dal.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,6 +23,7 @@ namespace HumbleBob.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDal(Configuration, DbConnectionStringName);
+            services.AddBll();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
