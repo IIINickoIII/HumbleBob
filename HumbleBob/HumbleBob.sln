@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumbleBob.Web", "HumbleBob.Web\HumbleBob.Web.csproj", "{1C49AB0F-A072-41B2-9EBD-B9ECF01E26C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleBob.Dal", "HumbleBob.Dal\HumbleBob.Dal.csproj", "{A3D6CBB4-DE4B-4724-87E2-5FE58A795C47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumbleBob.Dal", "HumbleBob.Dal\HumbleBob.Dal.csproj", "{A3D6CBB4-DE4B-4724-87E2-5FE58A795C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleBob.Bll", "HumbleBob.Bll\HumbleBob.Bll.csproj", "{4E2F714B-716F-42FF-BF6F-6C04104948BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A3D6CBB4-DE4B-4724-87E2-5FE58A795C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3D6CBB4-DE4B-4724-87E2-5FE58A795C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3D6CBB4-DE4B-4724-87E2-5FE58A795C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2F714B-716F-42FF-BF6F-6C04104948BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2F714B-716F-42FF-BF6F-6C04104948BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2F714B-716F-42FF-BF6F-6C04104948BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2F714B-716F-42FF-BF6F-6C04104948BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
