@@ -1,8 +1,8 @@
 using HumbleBob.Bll.Extensions;
 using HumbleBob.Dal.Extensions;
+using HumbleBob.Web.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +24,7 @@ namespace HumbleBob.Web
         {
             services.AddDal(Configuration, DbConnectionStringName);
             services.AddBll();
+            services.AddWeb();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -33,14 +34,17 @@ namespace HumbleBob.Web
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Items}/{action=GetReadOnlyItems}/");
             });
         }
     }
