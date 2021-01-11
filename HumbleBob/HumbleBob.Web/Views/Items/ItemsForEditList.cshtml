@@ -1,0 +1,29 @@
+﻿@model IEnumerable<HumbleBob.Bll.Dto.ItemDto>
+@{ 
+    ViewData["Title"] = "Items";
+}
+<h1>Items</h1>
+<a asp-controller="Items" asp-action="new">Create</a>
+<table class="table table-active">
+    <thead>
+    <tr scope="row">
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Storage Unit</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr scope="row">
+            <td>@item.Name</td>
+            <td>@item.Desciption</td>
+            <td>@item.Price</td>
+            <td>@item.StorageUnit</td>
+            <td>Edit|Delete</td>
+        </tr>
+    }
+    </tbody>
+</table>
